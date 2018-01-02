@@ -1,0 +1,33 @@
+<mat-card class="frm_Login">
+    <mat-card-header>
+        <mat-card-title style="text-align: center;font-family:Lucida Bright;font-size: 20px;padding-left: 160px;">
+            <h1>Sign up</h1>
+        </mat-card-title>
+        <mat-card-subtitle class="mat-error" [hidden]="!hasError">
+            {{error}}
+        </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <mat-form-field>
+            <input matInput placeholder="Username" type="text" [(ngModel)]="user.username" style="height: 30px;font-size: 20px;"/>
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <input matInput placeholder="Email" type="email" [(ngModel)]="user.email" style="height: 30px;font-size: 20px;"/>
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <input matInput placeholder="Full name" type="text" [(ngModel)]="user.name" style="height: 30px;font-size: 20px;"/>
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <input matInput placeholder="Password" type="password" [(ngModel)]="user.password" style="height: 30px;font-size: 20px;"/>
+        </mat-form-field>
+        <div class="tiny">
+            <span style="text-align: center;font-family:Lucida Bright;font-size: 20px;">Already have an account? <a routerLink="/login" >Log in now</a></span>
+        </div>
+    </mat-card-content>
+    <mat-card-actions>
+        <button id="btn_register" mat-raised-button color="primary" (click)="register()">Sign up</button>
+    </mat-card-actions>
+</mat-card>

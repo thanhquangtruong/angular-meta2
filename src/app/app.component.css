@@ -1,0 +1,41 @@
+mat-sidenav {
+    width: 237px;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+mat-toolbar {
+    box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12);
+    /*position: fixed;*/
+    /*top: 0;*/
+    /*left: 0;*/
+    /*right: 0;*/
+    /*z-index: 2;*/
+}
+
+mat-toolbar, mat-toolbar-row {
+    height: 64px;
+}
+
+a.nav-title, a.nav-link {
+    color: aliceblue;
+    text-decoration: none;
+}
+
+a.nav-link {
+    margin-left: 16px;
+    font-size: 0.8em;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.content {
+    height: 100%;
+    overflow: auto;
+}

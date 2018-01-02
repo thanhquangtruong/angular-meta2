@@ -1,0 +1,38 @@
+<h2><input matInput placeholder="Name" [(ngModel)]="card.name" [disabled]="!editMode"></h2>
+
+<mat-dialog-content>
+
+    <mat-form-field>
+        <textarea matInput matTextareaAutosize matAutosizeMinRows="3"
+                  matAutosizeMaxRows="6" placeholder="Content" [(ngModel)]="card.content"
+                  [disabled]="!editMode"></textarea>
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput [matDatepicker]="picker" placeholder="Due date" [(ngModel)]="date" [disabled]="!editMode">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field id="inp_h">
+        <input matInput type="number" placeholder="Hour" min="0" max="23" [(ngModel)]="hour" [disabled]="!editMode">
+    </mat-form-field>
+
+    <mat-form-field id="inp_m">
+        <input matInput type="number" placeholder="Minute" min="0" max="59" [(ngModel)]="min" [disabled]="!editMode">
+    </mat-form-field>
+
+</mat-dialog-content>
+
+<mat-dialog-actions>
+    <div [hidden]="editMode">
+        <button id="btn_exit" mat-button [mat-dialog-close]="true">Exit</button>
+        <button id="btn_edit" mat-raised-button color="primary" (click)="edit()">Edit</button>
+    </div>
+    <div [hidden]="!editMode">
+        <button id="btn_discard" mat-button (click)="discard()">Discard</button>
+        <button id="btn_save" mat-raised-button color="primary" (click)="save()">Save</button>
+    </div>
+
+
+</mat-dialog-actions>

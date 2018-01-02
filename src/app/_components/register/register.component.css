@@ -1,0 +1,39 @@
+:host {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+mat-card {
+    min-width: 300px;
+}
+
+mat-form-field {
+    width: 100%;
+}
+
+button#btn_register {
+    margin-right: 16px;
+    float: right;
+}
+
+.tiny {
+    font-size: 0.8em;
+    padding: 16px 0;
+}
+.frm_Login {
+    border: 10px solid #147696;
+    border-radius: 6px ;
+    width : 450px;
+    height: auto;
+    left: 50%;
+    top: 40%;
+    margin-top: -600px;
+    margin-left: -1300px;
+    padding: 20px;
+    box-shadow: 5px 10px 5px #666;
+    background: #E5F2D8;
+}

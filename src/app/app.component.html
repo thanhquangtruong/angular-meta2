@@ -1,0 +1,30 @@
+<mat-sidenav-container fullscreen>
+    <mat-sidenav #start>
+        <mat-nav-list>
+            somme list
+        </mat-nav-list>
+        <button mat-button tabindex="-1" (click)="start.close()">CLOSE</button>
+    </mat-sidenav>
+    <div class="container">
+        <mat-toolbar color="primary">
+            <mat-toolbar-row>
+                <!--<button mat-icon-button (click)="start.open('mouse')">-->
+                <!--<mat-icon>menu</mat-icon>-->
+                <!--</button>-->
+
+                <h1><a routerLink="" class="nav-title" style="font-family:Lucida Bright;font-style: italic; font-size: 30px;padding-left: 30px;">mKanban</a></h1>
+
+                <span class="spacer"></span>
+
+                <a class="nav-link" [hidden]="isAuthenticated" routerLink="/login"><span class="fa fa-sign-in"></span> Log in</a>
+                <a class="nav-link" [hidden]="isAuthenticated" routerLink="/register"><span class="fa fa-user-plus"></span> Sign up</a>
+                <a class="nav-link" [hidden]="!isAuthenticated" routerLink="/user"><span class="fa fa-user-circle"></span> {{currentUser?.name}}</a>
+                <a class="nav-link" [hidden]="!isAuthenticated" (click)="logout()"><span class="fa fa-sign-out"></span> Log out</a>
+            </mat-toolbar-row>
+        </mat-toolbar>
+        <div #root="dir" dir="ltr" class="content">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</mat-sidenav-container>
+

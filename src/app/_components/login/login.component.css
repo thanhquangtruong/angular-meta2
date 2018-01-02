@@ -1,0 +1,165 @@
+:host {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+mat-card {
+    min-width: 300px;
+}
+
+mat-form-field {
+    width: 100%;
+}
+
+button#btn_login {
+    margin-right: 16px;
+    float: right;
+}
+
+.tiny {
+    font-size: 0.8em;
+    padding: 16px 0;
+}
+
+
+.frm_Login {
+    border: 10px solid #147696;
+    border-radius: 6px ;
+    width : 450px;
+    height: auto;
+    left: 50%;
+    top: 40%;
+    margin-top: -600px;
+    margin-left: -1300px;
+    padding: 30px;
+    box-shadow: 5px 10px 5px #666;
+    background: #E5F2D8;
+}
+
+.frm_Login small {
+    font-style: italic;
+}
+.frm_Login hr{
+    color: #856F77;
+}
+#btn_Login{
+    margin-left:30% ;
+}
+.btn_Login_fb{
+    margin-left:20% ;
+    background-color:#2B60DE;
+    color: white;
+
+}
+.btn_dangky{
+    background-color:#2B60DE;
+    color: white;
+}
+/* canh giua*/
+.alignCenter {
+    text-align: center;
+}
+/*gach ngang*/
+.gachngang hr{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.facebook{
+    background-color: #2b5b95;
+    margin-right: 5px;
+    height: 35px;
+    width: 180px;
+    color: white;
+    font-weight: bold;
+}
+.google{
+    background-color: #e43f3b;
+    margin-right: 5px;
+    height: 35px;
+    width: 180px;
+    color: white;
+    font-weight: bold;
+}
+.signup{
+    background-color: #5aac44;
+    margin-right: 5px;
+    height: 45px;
+    width: 320px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-left: -10px;
+}
+/*    form đổi mật khẩu*/
+.frm_label .form-group label{
+    text-align: left;
+}
+.quenmk {
+    border: 10px solid #147696;
+    border-radius: 6px ;
+    position: absolute;
+    left: 50%;
+    top: 35%;
+    width : 700px;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    padding: 30px;
+    box-shadow: 5px 10px 5px #666;
+    background: #E5F2D8;
+}
+/* Forgot password*/
+.full{
+    margin-top: 50px;
+}
+h2{
+    text-align: center;
+}
+/* logout*/
+.log-out-1{
+    height: 200px;
+    color: black;
+    text-align: center;
+}
+p#logout-1{
+    margin-top: 80px;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+}
+p#logout-2{
+    font-size: 20px;
+}
+p#logout-3{
+    margin-left: 400px;
+    margin-right: 400px;
+    text-align: center;
+    font-size: 18px;
+}
+.btn-download-app{
+    height: 45px;
+    width: 200px;
+    background-color: white;
+    font-size: 22px;
+    text-align: center;
+}
+p#txt-logout-1{
+    font-size: 20px;
+    text-align: left;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 80px;
+}
+p#logout-4{
+    margin-top: 80px;
+    font-weight: bold;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+}
+

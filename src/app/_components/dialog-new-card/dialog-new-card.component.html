@@ -1,0 +1,33 @@
+<h2 mat-dialog-title>New card</h2>
+
+<mat-dialog-content>
+    <mat-form-field>
+        <input matInput placeholder="Name" [(ngModel)]="name">
+    </mat-form-field>
+
+    <mat-form-field>
+        <textarea matInput matTextareaAutosize matAutosizeMinRows="3"
+                  matAutosizeMaxRows="6" placeholder="Content" [(ngModel)]="content"></textarea>
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput [matDatepicker]="picker" placeholder="Due date" [(ngModel)]="date">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field id="inp_h">
+        <input matInput type="number" placeholder="Hour" min="0" max="23" [(ngModel)]="hour">
+    </mat-form-field>
+
+    <mat-form-field id="inp_m">
+        <input matInput type="number" placeholder="Minute" min="0" max="59" [(ngModel)]="min">
+    </mat-form-field>
+
+
+</mat-dialog-content>
+
+<mat-dialog-actions>
+    <button id="btn_cancel" mat-button [mat-dialog-close]="true">Cancel</button>
+    <button id="btn_create" mat-raised-button color="primary" (click)="create()">Create</button>
+</mat-dialog-actions>

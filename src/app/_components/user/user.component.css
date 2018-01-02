@@ -1,0 +1,24 @@
+#user-detail {
+    padding: 8px;
+}
+
+mat-card-content ul {
+    padding-left: 8px;
+}
+
+mat-card-content li {
+    text-decoration: none;
+    list-style: none;
+}
+
+span.field-name {
+    font-weight: bold;
+}
+
+#col-right {
+    padding: 8px;
+}
+
+button#btn_c_project {
+    margin-top: 4px;
+}

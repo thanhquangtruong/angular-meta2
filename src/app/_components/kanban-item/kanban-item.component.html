@@ -1,0 +1,17 @@
+<mat-card>
+    <div class="content" (click)="viewCardDetail()">
+        <span>{{card.name}}</span>
+    </div>
+    <div class="actions">
+        <button id="btn_more" mat-button [matMenuTriggerFor]="menu">
+            <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item (click)="moveUp()">Move up</button>
+            <button mat-menu-item (click)="moveDown()">Move down</button>
+            <button mat-menu-item (click)="moveNext()">Move next</button>
+            <button mat-menu-item (click)="moveBack()">Move back</button>
+            <button mat-menu-item disabled>Delete</button>
+        </mat-menu>
+    </div>
+</mat-card>

@@ -1,0 +1,40 @@
+<div class="grid">
+
+    <mat-card *ngFor="let col of columns; let id1 = index" class="d-col">
+        <mat-card-header>
+
+            <div class="content">
+                <span>{{col.name}}</span>
+            </div>
+            <div class="actions">
+                <button id="btn_more" mat-button [matMenuTriggerFor]="menu">
+                    <mat-icon>more_vert</mat-icon>
+                </button>
+                <mat-menu #menu="matMenu">
+                    <button mat-menu-item (click)="moveColumnNext(col, id1)">Move next</button>
+                    <button mat-menu-item (click)="moveColumnBack(col, id1)">Move back</button>
+                    <button mat-menu-item disabled>Delete</button>
+                </mat-menu>
+            </div>
+
+        </mat-card-header>
+        <mat-card-content>
+            <div class="card-container">
+                <app-kanban-item
+                    *ngFor="let card of col.cards"
+                    [card]="card"
+                    (movedUp)="moveCardUp(card, id1)"
+                    (movedDown)="moveCardDown(card, id1)"
+                    (movedNext)="moveCardNext(card, id1)"
+                    (movedBack)="moveCardBack(card, id1)">
+                </app-kanban-item>
+            </div>
+            <button class="btn_create_card" mat-button (click)="createCard(col.id)">New card</button>
+        </mat-card-content>
+    </mat-card>
+
+    <div class="d-col empty">
+        <button id="btn_create_column" mat-button (click)="createColumn()">New column</button>
+    </div>
+
+</div>

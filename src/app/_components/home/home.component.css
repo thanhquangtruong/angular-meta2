@@ -1,0 +1,26 @@
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#sec1 {
+    background-color: #C5CAE9;
+    height: calc(100vh - 64px);
+    color: black;
+}
+
+#sec1 h1 {
+    margin: 0;
+    padding: 24px;
+    font-weight: bold;
+}
+
+.layout-centered-content {
+    text-align: center;
+}
+
+.full-h {
+    height: 100%;
+}
+

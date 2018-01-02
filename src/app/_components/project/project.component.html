@@ -1,0 +1,12 @@
+<mat-tab-group>
+    <!--<mat-tab label="{{project.name}}" *ngIf="project" [selectedIndex]="1"></mat-tab>-->
+    <mat-tab label="Kanban table" *ngIf='project'>
+        <app-project-kanban [project]="project"></app-project-kanban>
+    </mat-tab>
+    <mat-tab label="Team" disabled>
+
+    </mat-tab>
+    <mat-tab label="Members" disabled>
+
+    </mat-tab>
+</mat-tab-group>

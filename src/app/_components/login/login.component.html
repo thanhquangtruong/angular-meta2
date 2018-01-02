@@ -1,0 +1,28 @@
+<mat-card class="frm_Login">
+    <mat-card-header>
+        <mat-card-title style="text-align: center;font-family:Lucida Bright;font-size: 20px;padding-left: 160px;">
+            <h1>Login</h1>
+        </mat-card-title>
+        <mat-card-subtitle class="mat-error" [hidden]="error == null">
+            {{error?.error.error_description}}
+        </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <mat-form-field >
+            <input matInput placeholder="Username" type="text" [(ngModel)]="username" style="height: 35px;font-size: 20px;"/>
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <input matInput placeholder="Password" type="password" [(ngModel)]="password" style="height: 35px;font-size: 20px;"/>
+        </mat-form-field>
+        <br>
+        <mat-checkbox color="warn" (checked)="isRemember">Remember login</mat-checkbox>
+        <br>
+        <div class="tiny">
+            <span style="text-align: center;font-family:Lucida Bright;font-size: 20px;">Don't have an account? <a routerLink="/register">Sign up now</a></span>
+        </div>
+    </mat-card-content>
+    <mat-card-actions>
+        <button id="btn_login" mat-raised-button color="primary" (click)="login()">Log in</button>
+    </mat-card-actions>
+</mat-card>
